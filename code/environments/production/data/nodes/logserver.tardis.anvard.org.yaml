@@ -1,0 +1,9 @@
+---
+nginx::default_server: false
+nginx::confd_templates:
+  - 'kibana/kibana.conf'
+classes:
+  - elasticsearch
+  - kibana
+  - logstash_syslog
+  - nginx

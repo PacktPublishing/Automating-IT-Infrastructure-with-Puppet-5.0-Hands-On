@@ -1,0 +1,6 @@
+[database]
+subname = //<%= $::puppetdb::database_loc %>/puppetdb
+username = puppetdb
+password = puppetdb
+
+log-slow-statements = 10

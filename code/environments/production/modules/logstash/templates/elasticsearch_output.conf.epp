@@ -1,0 +1,9 @@
+output {
+  elasticsearch {
+    hosts => ["<%= $::logstash::elasticsearch_loc %>"]
+    sniffing => true
+    manage_template => true
+    index => "%{[@metadata][beat]}-%{+YYYY.MM.dd}"
+    document_type => "%{[@metadata][type]}"
+  }
+}
